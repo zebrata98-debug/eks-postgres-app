@@ -7,10 +7,12 @@ phases:
       - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_URI
       - export IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - echo Image tag is $IMAGE_TAG
+      - echo Source directory is $CODEBUILD_SRC_DIR
+      - ls $CODEBUILD_SRC_DIR/app/
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t $ECR_URI:latest -f Dockerfile .
+      - docker build -t $ECR_URI:latest $CODEBUILD_SRC_DIR/app/
       - docker tag $ECR_URI:latest $ECR_URI:$IMAGE_TAG
   post_build:
     commands:
