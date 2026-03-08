@@ -5,19 +5,7 @@ managed PostgreSQL database on RDS. The entire infrastructure is provisioned
 with Terraform and the Docker image is built and pushed to ECR automatically 
 using AWS CodeBuild — no manual Docker commands needed.
 
-This is the cloud-native version of my local Kubernetes + PostgreSQL project, 
-running on real AWS infrastructure instead of Minikube.
-
-## Architecture
-```
-Internet → AWS LoadBalancer → EKS Node Group (2 nodes, t3.small)
-                                      ↓
-                              App Pods (2 replicas)
-                                      ↓
-                           RDS PostgreSQL (db.t3.micro)
-```
-
-## Project Structure
+Project Structure
 ```
 eks-postgres-app/
 ├── app/
