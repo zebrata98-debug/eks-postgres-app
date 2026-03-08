@@ -129,14 +129,3 @@ cd terraform && terraform destroy -var="db_password=YOUR_PASSWORD"
 - Troubleshooting CrashLoopBackOff pods by reading kubectl logs
 - How Terraform manages complex multi-service AWS infrastructure
 ```
-
----
-
-**GitHub About Section** — go to your repo on GitHub, click the ⚙️ gear icon next to **About** on the right side and paste this:
-```
-Node.js REST API on AWS EKS with RDS PostgreSQL. Infrastructure provisioned with Terraform. Docker image built and pushed to ECR via AWS CodeBuild. Deployed to Kubernetes with LoadBalancer public access.
-```
-
-**Topics to add:**
-```
-aws, eks, kubernetes, terraform, rds, postgresql, nodejs, ecr, codebuild, docker, devops, sre, infrastructure-as-code
