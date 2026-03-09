@@ -9,25 +9,25 @@ Project Structure
 ```
 eks-postgres-app/
 ├── app/
-│   ├── index.js          # Express REST API with PostgreSQL
+│   ├── index.js          
 │   ├── package.json
 │   ├── Dockerfile
-│   └── buildspec.yml     # CodeBuild instructions for Docker build + ECR push
+│   └── buildspec.yml     
 ├── terraform/
-│   ├── main.tf           # Provider config
-│   ├── variables.tf      # Input variables
-│   ├── vpc.tf            # VPC, subnets, security groups
-│   ├── eks.tf            # EKS cluster and node group
-│   ├── rds.tf            # RDS PostgreSQL instance
-│   ├── ecr.tf            # ECR repository
-│   ├── codebuild.tf      # CodeBuild project and IAM role
-│   └── outputs.tf        # Cluster endpoint, RDS endpoint, ECR URI
+│   ├── main.tf           
+│   ├── variables.tf      
+│   ├── vpc.tf            
+│   ├── eks.tf            
+│   ├── rds.tf            
+│   ├── ecr.tf            
+│   ├── codebuild.tf      
+│   └── outputs.tf        
 ├── k8s/
 │   ├── namespace.yaml
-│   ├── secret.yaml       # DB credentials
-│   ├── configmap.yaml    # Non-sensitive config
-│   ├── deployment.yaml   # App deployment with health probes
-│   └── service.yaml      # LoadBalancer service
+│   ├── secret.yaml       
+│   ├── configmap.yaml    
+│   ├── deployment.yaml   
+│   └── service.yaml      
 └── README.md
 ```
 
